@@ -1,0 +1,54 @@
+extends layout
+
+block content
+  body(data-spy='scroll', data-target='.scrollspy')
+    .site-wrapper
+      .site-wrapper-inner
+        .cover-container
+          .masthead.clearfix
+            .inner
+              h1.masthead-brand Reculta
+              nav
+                ul.nav.masthead-nav
+                  li.active
+                    a(href='/') Home
+                  li
+                    a(href='/login') Login
+                  li
+                    a(href='#') Contact
+        
+          .container-fluid(style='max-width: 400px;')
+                  form.form-signin(name='signup', method='post', action='/signup')
+                    h2.form-signin-heading Please Sign Up 
+                    br
+                    br
+                    |  
+                    label.sr-only(for='email') Email address
+                    |  
+                    input#inputEmail.form-control(name='email',type='email', placeholder='Email address', required='', autofocus='')
+                    br
+                    input.form-control(name='firstname',type='text', placeholder='First Name')
+                    br
+                    input.form-control(name='lastname', type='text', placeholder='Last Name')
+                    br
+                    |  
+                    label.sr-only(for='password') Password
+                    |  
+                    input#inputPassword.form-control(name='password',type='password', placeholder='Password', required='')
+                    br
+                    |  
+                    button.btn.btn-lg.btn-primary.btn-block(type='submit') Sign Up
+                    p
+                    | Have an account? 
+                    a(href='/login') Sign Up.
+
+
+          .mastfoot
+            .inner
+              p
+                | Cover template for 
+                a(href='http://getbootstrap.com') Bootstrap
+                |  , by 
+                a(href='https://twitter.com/mdo') @mdo
+                | .
+    

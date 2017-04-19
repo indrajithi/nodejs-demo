@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  body(data-spy='scroll', data-target='.scrollspy')
+    .site-wrapper
+      .site-wrapper-inner
+        .cover-container
+          .masthead.clearfix
+            .inner
+              h1.masthead-brand Reculta
+              nav
+                ul.nav.masthead-nav
+                  li.active
+                    a(href='#') Home
+                  li
+                    a(href='/login') Login
+                  li
+                    a(href='#') Contact
+          .inner.cover
+            h1.cover-heading About Us.
+            p.lead
+              | Reculta aims at helping institutions and companies come together to conduct hassle-free recruitment processes with the aid of analytics and visualization tools. 
+
+            p.lead
+            a.btn.btn-lg.btn-default(href='#') Learn more
+          .mastfoot
+            .inner
+              p
+                | Cover template for 
+                a(href='http://getbootstrap.com') Bootstrap
+                |  , by 
+                a(href='https://twitter.com/mdo') @mdo
+                | .
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js')
