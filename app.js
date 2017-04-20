@@ -32,6 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+//app.set('view engine', 'ejs');
 
 // For Passport
     app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
@@ -43,9 +44,7 @@ app.set('view engine', 'pug');
 // routes ======================================================================
 //require('./app-old/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
 
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Reculta' });
-});
+
 
 
 //app.use('/', index);

@@ -16,12 +16,48 @@ block content
                     a(href='/logout') Logout
                   li
                     a(href='#') Contact
+
+
+              
         
           .container-fluid 
-                  form.form-signin
-                    h2.form-signin-heading You are logged in
-                    br 
-                    br
+            form.form-signin(name='profile', method='post', action='/profile')
+                
+            form.form-horizontal
+              h2.form-signin-heading Welcome <em><span class="text-info"><strong>#{username}</strong></em></span>, Please Complete Your profile.
+              br
+              br
+
+              .form-group
+                <label style="float:left; padding-left:130px;font-size:20px"><span>Academic Qualifications</span></label>
+                br
+                br
+                label.col-sm-2.control-label X<sup>th</sup> School
+                .col-sm-10
+                  input.form-control(name='school',type='text', placeholder='School')
+                  
+              .form-group
+                label.col-sm-2.control-label X<sup>th</sup> Board
+                .col-sm-10
+                  input.form-control(name='board',type='text', placeholder='Board')
+
+              .form-group
+                label.col-sm-2.control-label Percentage
+                .col-sm-10
+                  input.form-control(name='marks',type='text', placeholder='Total Percentage')
+              
+              .form-group
+                label.col-sm-2.control-label(for='exampleInputFile') Marks Card
+                .col-sm-10  
+                  input#xthproof(type='file')               
+  
+
+                  br
+                  button.btn.btn-lg.btn-success.btn-block(type='submit') Submit
+              br
+              br
+
+
                    
 
           .mastfoot
