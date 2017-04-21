@@ -5,7 +5,7 @@ block content
     .site-wrapper
       .site-wrapper-inner
         .cover-container
-          .masthead.clearfix
+          .masthead.clearfix(style="position: relative;")
             .inner
               h1.masthead-brand Reculta
               nav
@@ -15,19 +15,19 @@ block content
                   li
                     a(href='/logout') Logout
                   li
-                    a(href='#') Contact
+                    a(href='/dashboard') Dashboard
 
 
               
         
           .container-fluid 
-            form.form-signin(name='profile', method='post', action='/profile')
+            form.form-signin(name='profile', method='post', action='/')
                 
-            form.form-horizontal
+            form.form-horizontal(style="padding-top:10px")
+              br
               h2.form-signin-heading Welcome <em><span class="text-info"><strong>#{username}</strong></em></span>, Please Complete Your profile.
-              br
-              br
-
+                br
+                br
               .form-group
                 <label style="float:left; padding-left:130px;font-size:20px"><span>Academic Qualifications</span></label>
                 br
@@ -49,6 +49,47 @@ block content
               .form-group
                 label.col-sm-2.control-label(for='exampleInputFile') Marks Card
                 .col-sm-10  
+                  input#xthproof(type='file') 
+                hr
+                br
+                label.col-sm-2.control-label XII<sup>th</sup> School
+                .col-sm-10
+                  input.form-control(name='school',type='text', placeholder='School')
+                  
+              .form-group
+                label.col-sm-2.control-label XII<sup>th</sup> Board
+                .col-sm-10
+                  input.form-control(name='board',type='text', placeholder='Board')
+
+              .form-group
+                label.col-sm-2.control-label Percentage
+                .col-sm-10
+                  input.form-control(name='marks',type='text', placeholder='Total Percentage')
+              
+              .form-group
+                label.col-sm-2.control-label(for='exampleInputFile') Marks Card
+                .col-sm-10  
+                  input#xthproof(type='file')               
+  
+                hr
+                br
+                label.col-sm-2.control-label College
+                .col-sm-10
+                  input.form-control(name='school',type='text', placeholder='College')
+                  
+              .form-group
+                label.col-sm-2.control-label Board
+                .col-sm-10
+                  input.form-control(name='board',type='text', placeholder='Board')
+
+              .form-group
+                label.col-sm-2.control-label Percentage
+                .col-sm-10
+                  input.form-control(name='marks',type='text', placeholder='Total Percentage')
+              
+              .form-group
+                label.col-sm-2.control-label(for='exampleInputFile') Marks Card
+                .col-sm-10  
                   input#xthproof(type='file')               
   
 
@@ -56,11 +97,11 @@ block content
                   button.btn.btn-lg.btn-success.btn-block(type='submit') Submit
               br
               br
-
+        
 
                    
 
-          .mastfoot
+          .mastfoot(style="position: relative;")
             .inner
               p
                 | Cover template for 
